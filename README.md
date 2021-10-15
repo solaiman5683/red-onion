@@ -1,1 +1,1 @@
-<h1>Red Onion Restaurant App</h1>
+<h1 style='text-align:center;'>Red Onion Restaurant App</h1>
