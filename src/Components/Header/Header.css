@@ -1,0 +1,22 @@
+.input-box {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px;
+	background-color: white;
+	border-radius: 30px;
+	overflow: hidden;
+	width: 400px;
+}
+input {
+	border: transparent;
+	padding: 10px 20px;
+	color: rgb(77, 77, 77);
+}
+
+input:focus {
+	outline: transparent;
+}
+
+input:focus .input-box {
+	background-color: red;
+}

@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+h1 {
+	text-align: center;
+}
+span {
+	cursor: pointer;
+	padding: 8px 20px;
+}
+.btnRed {
+	background-color: #f91944;
+	color: white;
+	font-weight: 600;
+	border-radius: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-pills .nav-link.active {
+	background-color: transparent;
+	color: #f91944;
+	/* border-bottom: 2px solid #f91944; */
+	border-radius: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-pills .nav-link.active::after {
+	content: '';
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	height: 3px;
+	bottom: 0;
+	width: 60%;
+	left: 20%;
+	background: #f91944;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-pills .nav-link {
+	position: relative;
+	color: #333;
+}
+.nav-pills .nav-link::after {
+	content: '';
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	height: 3px;
+	bottom: 0;
+	width: 0;
+	left: 20%;
+	background: #f91944;
+	transition: all 0.1s ease-in;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-pills .nav-link:hover::after {
+	width: 60%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.food-item:hover {
+	box-shadow: 0 0 5px rgba(175, 175, 175, 0.507);
+	border-radius: 20px;
+}
+
+.price {
+	color: #f91944;
+	font-weight: 600;
+}
+
+.checkout-btn {
+	border: 0;
+	border-radius: 10px;
+	padding: 10px 40px;
+	font-size: 1.2rem;
+	color: white;
+	font-weight: 600;
+	background: #cecece;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.checkout-btn::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	background-color: #f91944;
+	height: 100%;
+	z-index: -1;
+	transition: all 0.2s linear;
+}
+.checkout-btn:hover:after {
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.753);
+}
+
+a:hover {
+	color: #ffffff;
 }
