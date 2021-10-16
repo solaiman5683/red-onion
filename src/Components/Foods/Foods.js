@@ -1,20 +1,12 @@
 import React, { useState } from 'react';
-import { useEffect } from 'react';
 import { Tabs, Tab } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 import Food from '../Food/Food';
+import { useFoodsContext } from '../../Context/FoodContext';
 
 const Foods = () => {
 	const [key, setKey] = useState('home');
-	const [foods, setFoods] = useState([]);
-	useEffect(() => {
-		fetch(
-			'https://raw.githubusercontent.com/solaiman5683/foodJson/main/food.json'
-		)
-			.then(res => res.json())
-			.then(data => setFoods(data));
-	}, []);
-
+	const foods = useFoodsContext();
 	const breakfast = foods.filter(food => food.catagory === 'breakfast');
 	const lunch = foods.filter(food => food.catagory === 'lunch');
 	const dinner = foods.filter(food => food.catagory === 'dinner');
@@ -49,7 +41,7 @@ const Foods = () => {
 					</Row>
 				</Tab>
 			</Tabs>
-			<button className='checkout-btn my-5'>Chekout Your Foods</button>
+			<button className='checkout-btn my-5'>Checkout Your Foods</button>
 		</div>
 	);
 };

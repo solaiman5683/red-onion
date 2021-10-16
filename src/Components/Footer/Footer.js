@@ -4,13 +4,13 @@ import logo from '../../assets/images/logo.png';
 const Footer = () => {
 	return (
 		<div className='bg-dark text-light'>
-			<div className='container pt-5 pb-2'>
+			<div className='container pt-5 pb-2 footer-nav'>
 				<div className='row'>
 					<div className='col-3'>
 						<img width='200px' src={logo} alt='Footer Logo' />
 					</div>
-					<div className='col-5'></div>
-					<div className='col-2'>
+					<div className='col-3'></div>
+					<div className='col-3'>
 						<ul
 							style={{
 								listStyle: 'none',
@@ -31,7 +31,7 @@ const Footer = () => {
 							</li>
 						</ul>
 					</div>
-					<div className='col-2'>
+					<div className='col-3'>
 						<ul
 							style={{
 								listStyle: 'none',
@@ -53,7 +53,7 @@ const Footer = () => {
 						</ul>
 					</div>
 				</div>
-				<p className='row mt-5'>
+				<div className='row mt-5'>
 					<div className='col-6'>
 						<p className='text-muted'>Copyright &copy;2021 Online Food</p>
 					</div>
@@ -62,7 +62,7 @@ const Footer = () => {
 						<span className='pe-0'>Terms of use</span>
 						<span className='pe-0'>Pricing</span>
 					</div>
-				</p>
+				</div>
 			</div>
 		</div>
 	);
